@@ -1,6 +1,6 @@
 Vendored from https://github.com/MengTo/Skills (agent-skills/illustration/illustration-one-line)
 Upstream commit: 398cd41c86ba42fbb30e944ae507f463648f08b7
-Files kept unmodified apart from this LICENSE addition.
+Trimmed for this repo: demo/ and agents/ removed (verified unreferenced by SKILL.md); everything else unmodified.
 
 MIT License
 
