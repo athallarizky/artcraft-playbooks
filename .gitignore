@@ -18,3 +18,6 @@ Thumbs.db
 # Logs & temp
 *.log
 /tmp/
+
+# Design work output (reproducible artifacts)
+figcraft/output/
