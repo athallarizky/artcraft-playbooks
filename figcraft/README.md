@@ -15,7 +15,9 @@
 | File | Purpose |
 |---|---|
 | [`AGENTS.md`](./AGENTS.md) | The operating manual — load this into the agent before any FigCraft work |
-| `skills/` *(planned)* | Specialized workflows (asset generation style guides, page templates, …) |
+| [`skills/vectosolve/SKILL.md`](./skills/vectosolve/SKILL.md) | AI asset pipeline — vectorize, remove background, upscale, generate SVG logos (paid API) feeding §5 |
+| [`skills/illustration-one-line/SKILL.md`](./skills/illustration-one-line/SKILL.md) | One-line illustration style — hand-written SVG spot illustrations via a no-dependency generator toolkit (MIT, vendored from [MengTo/Skills](https://github.com/MengTo/Skills); 14 more styles available upstream) |
+| `skills/` | More specialized workflows planned (page templates, more illustration styles, …) |
 
 ## Quick start
 
