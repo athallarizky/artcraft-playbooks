@@ -12,11 +12,15 @@
 
 ## Layout
 
-| File | Purpose |
-|---|---|
-| [`AGENTS.md`](./AGENTS.md) | The operating manual — load this into the agent before any FigCraft work |
-| [`skills/illustration-one-line/SKILL.md`](./skills/illustration-one-line/SKILL.md) | One-line illustration style — hand-written SVG spot illustrations via a no-dependency generator toolkit (MIT, vendored from [MengTo/Skills](https://github.com/MengTo/Skills); 14 more styles available upstream) |
-| `skills/` | More specialized workflows planned (page templates, more illustration styles, …) |
+| File | Creators | Purpose |
+|---|---|---|
+| [`AGENTS.md`](./AGENTS.md) | [athallarizky](https://github.com/athallarizky) | The operating manual — load this into the agent before any FigCraft work |
+| [`skills/illustration-one-line/SKILL.md`](./skills/illustration-one-line/SKILL.md) | [Meng To](https://github.com/MengTo) | One-line illustration style — hand-written SVG spot illustrations via a no-dependency generator toolkit (MIT, vendored from [MengTo/Skills](https://github.com/MengTo/Skills); 12 more styles available upstream) |
+| [`skills/illustration-flat/SKILL.md`](./skills/illustration-flat/SKILL.md) | [Meng To](https://github.com/MengTo) | Flat illustration style — bold flat shapes with the `flat-kit.mjs` generator toolkit (MIT, vendored from MengTo/Skills) |
+| [`skills/illustration-ink-sketch/SKILL.md`](./skills/illustration-ink-sketch/SKILL.md) | [Meng To](https://github.com/MengTo) | Ink-sketch illustration style — wobbly ink linework with the `ink-kit.mjs` generator toolkit (MIT, vendored from MengTo/Skills) |
+| [`skills/kawaii-svg-illustrator/SKILL.md`](./skills/kawaii-svg-illustrator/SKILL.md) | [athallarizky](https://github.com/athallarizky) | Kawaii SVG style guide — warm minimalist vector style, hand-authored SVG, no toolkit |
+| [`skills/pendev-mascot-svg/SKILL.md`](./skills/pendev-mascot-svg/SKILL.md) | [athallarizky](https://github.com/athallarizky) | Flat/kawaii mascot generator — hand-authored SVG discipline with the silhouette–stroke trick |
+| `skills/` | — | More specialized workflows planned (page templates, more illustration styles, …) |
 
 ## Quick start
 
