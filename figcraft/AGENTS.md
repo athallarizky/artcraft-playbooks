@@ -147,8 +147,6 @@ Not every prop applies to every type — the per-step error names the problem; a
 
 Workflow: **author SVG → render → vision-verify → iterate → rasterize → place.**
 
-For AI-generated or AI-cleaned assets (logo generation, vectorize, background removal, upscaling), start with the [vectosolve skill](./skills/vectosolve/SKILL.md) (paid API), then rejoin this workflow at the render/verify step.
-
 1. Hand-author flat-design SVG (pure shapes, no external deps, `viewBox` 512×512 works well).
 2. Render a preview: macOS `qlmanage -t -s 512 -o <dir> file.svg`; Linux `rsvg-convert -w 512`.
 3. **Vision-verify the render** — never trust unrendered SVG. Ask a vision model to describe it and flag misplaced shapes/ambiguities.
