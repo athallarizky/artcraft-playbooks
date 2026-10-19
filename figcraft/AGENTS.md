@@ -42,6 +42,18 @@ claude mcp add --scope user figcraft-app -- ~/.local/bin/figcraft-cli mcp --atta
 
 ## 3. Operating modes
 
+### The sync model (read this before choosing a mode)
+
+FigCraft has **no file watching**. The app never reloads a changed file from disk, there is no reload/revert command, and `file.open` on an already-open file only focuses the in-memory copy. There is no "auto-sync" to enable — instead, sync is achieved by **eliminating the file round-trip**: in live mode the agent drives the app directly, so there is never a second copy to reconcile.
+
+| Situation | Sync behavior | Agent obligation |
+|---|---|---|
+| Headless, app closed (or file not open in app) | The file on disk is the only copy — nothing to sync | None; when the user opens it they see the disk version |
+| Headless while the app has the same file open | **Forbidden** — two diverging copies; the app's next save silently overwrites your edit | Do not edit the file. Either switch to live mode or have the user close without saving first (§3.3) |
+| Live mode (`--control` + attach) | Edits stream into the app in real time; user watches them land | `save_file` (or user ⌘S) to persist; verify by re-reading headlessly |
+
+Rule of thumb: **one source of truth per document** — the file (headless, app closed) *or* the app's live session. Never both. If the user wants to see changes as they happen, that requirement alone decides the mode: live.
+
 ### 3.1 Headless (file on disk)
 
 ```sh
@@ -134,6 +146,8 @@ Not every prop applies to every type — the per-step error names the problem; a
 ## 5. Assets (illustrations)
 
 Workflow: **author SVG → render → vision-verify → iterate → rasterize → place.**
+
+For AI-generated or AI-cleaned assets (logo generation, vectorize, background removal, upscaling), start with the [vectosolve skill](./skills/vectosolve/SKILL.md) (paid API), then rejoin this workflow at the render/verify step.
 
 1. Hand-author flat-design SVG (pure shapes, no external deps, `viewBox` 512×512 works well).
 2. Render a preview: macOS `qlmanage -t -s 512 -o <dir> file.svg`; Linux `rsvg-convert -w 512`.
